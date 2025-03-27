@@ -6,12 +6,11 @@ import java.util.Collections;
 public class Baralho {
     private final List<Carta> cartas;
 
-    private String[] naipes = {"Ouros", "Copas", "Espadas", "Paus"};
-    private String[] valores = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-
     public Baralho() {
         cartas = new ArrayList<>();
+        String[] naipes = {"Ouros", "Copas", "Espadas", "Paus"};
         for (String naipe : naipes) {
+            String[] valores = {"2", "3", "4", "5", "6", "7", "J", "Q", "K", "A"};
             for (String valor : valores) {
                 cartas.add(new Carta(valor, naipe));
             }
