@@ -24,7 +24,7 @@ public class Jogador {
         return nome;
     }
 
-    public void aumentarPontuação(int pontos) { this.pontuacao += pontos; }
+    public void aumentarPontuacao(int pontos) { this.pontuacao += pontos; }
 
 
 
