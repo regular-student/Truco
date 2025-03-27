@@ -10,7 +10,7 @@ public class Baralho {
         cartas = new ArrayList<>();
         String[] naipes = {"Ouros", "Copas", "Espadas", "Paus"};
         for (String naipe : naipes) {
-            String[] valores = {"2", "3", "4", "5", "6", "7", "J", "Q", "K", "A"};
+            String[] valores = {"4", "5", "6", "7", "Q", "J", "K", "A", "2", "3"};
             for (String valor : valores) {
                 cartas.add(new Carta(valor, naipe));
             }
