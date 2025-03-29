@@ -8,11 +8,20 @@ public class Baralho {
 
     public Baralho() {
         cartas = new ArrayList<>();
+        int f = 1;
+        int aux = 0;
         String[] naipes = {"Ouros", "Copas", "Espadas", "Paus"};
-        for (String naipe : naipes) {
-            String[] valores = {"4", "5", "6", "7", "Q", "J", "K", "A", "2", "3"};
-            for (String valor : valores) {
-                cartas.add(new Carta(valor, naipe));
+        String[] valores = {"4", "5", "6", "7", "Q", "J", "K", "A", "2", "3"};
+        for (String valor : valores) {    
+            for (String naipe : naipes)  {
+                if(aux > 3) {
+                    f++;
+                    aux = 0;
+                }
+    
+
+                cartas.add(new Carta(valor, naipe, f));
+                aux++;
             }
         }
     }
