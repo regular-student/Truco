@@ -2,8 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Jogo j1 = new Jogo(3);
+        Jogo j1 = new Jogo(1);
         j1.cadJogadores();
+        j1.rodada();
+
+
+        Scanner leitor = new Scanner(System.in);
+        leitor.close();
+        Scanner scanner = new Scanner(System.in);
+        scanner.close();
+
+
      /*   Baralho baralho = new Baralho();
 
         baralho.embaralhar();
