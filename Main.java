@@ -7,10 +7,10 @@ public class Main {
         j1.rodada();
 
 
-        Scanner leitor = new Scanner(System.in);
-        leitor.close();
-        Scanner scanner = new Scanner(System.in);
-        scanner.close();
+//        Scanner leitor = new Scanner(System.in);
+//        leitor.close();
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.close();
 
 
      /*   Baralho baralho = new Baralho();

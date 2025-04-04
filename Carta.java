@@ -40,4 +40,9 @@ public class Carta {
                 break;
         }
     }
+
+    @Override
+    public String toString() {
+        return valor + " de " + naipe + " (Força: " + forca + ")";
+    }
 }

@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Jogo{
     private float rodada;
     private final List<Jogador> jogadores;
+    private Baralho baralho;
 
 
  Jogo (float rodada) {
@@ -22,8 +23,10 @@ public class Jogo{
             System.out.println("O jogo deve ter 2 2ou 4 jogadores.");
             numeroDeJogadores = leitor.nextInt();
         }
-        Baralho baralho = new Baralho();
+        this.baralho = new Baralho();
         baralho.embaralhar();
+        baralho.gerarManilha();
+        baralho.mostrarBaralho();
         System.out.println("Baralho embaralhado.");
 
         for(int i = 0; i < numeroDeJogadores; i++) {
@@ -56,17 +59,20 @@ public class Jogo{
 
         for(int i = 0; i < 3; i++) { 
             for (Carta carta1 : jogador1.getMao()) {
-                System.out.println(carta1.getValor() + " de " + carta1.getNaipe() + "forca" + carta1.getForca());
+                System.out.println(carta1.getValor() + " de " + carta1.getNaipe() + " forca" + carta1.getForca());
             }
-        System.out.println(jogador1.getNome() + ", escolha sua carta (0, 1 ou 2): ");
+
+        System.out.println(jogador1.getNome() + ", escolha sua carta (1, 2 ou 3): ");
         int escolha1 = scanner.nextInt();
-        Carta carta1 = jogador1.jogarCarta(escolha1);
+
+        Carta carta1 = jogador1.jogarCarta(escolha1 - 1);
+
         for (Carta carta2 : jogador2.getMao()) {
             System.out.println(carta2.getValor() + " de " + carta2.getNaipe() + "forca" + carta2.getForca());
         }
-        System.out.println(jogador2.getNome() + ", escolha sua carta (0, 1 ou 2): ");
+        System.out.println(jogador2.getNome() + ", escolha sua carta (1, 2 ou 3): ");
         int escolha2 = scanner.nextInt();
-        Carta carta2 = jogador2.jogarCarta(escolha2);
+        Carta carta2 = jogador2.jogarCarta(escolha2 - 1);
             
          
         if(carta1.getForca() > carta2.getForca()) {
@@ -96,6 +102,10 @@ public class Jogo{
         if (pontosJogador1 == 2 || pontosJogador2 == 2) {
             break;
         }
+
+        baralho.gerarManilha();
+        jogador1.receberCarta(baralho.darCarta());
+        jogador2.receberCarta(baralho.darCarta());
     }  
     
         if (pontosJogador1 == pontosJogador2) {
