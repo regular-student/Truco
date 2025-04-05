@@ -9,6 +9,13 @@ public class Baralho {
 
     public Baralho() {
         cartas = new ArrayList<>();
+        iniciarBaralho();
+        
+        
+    }
+
+    public void iniciarBaralho() {
+        this.cartas.clear();
         int f = 1;
         int aux = 0;
         String[] naipes = {"Ouros", "Copas", "Espadas", "Paus"};
@@ -24,6 +31,8 @@ public class Baralho {
                 }
             }
         }
+        Collections.shuffle(this.cartas);
+
     }
 
     public void mostrarBaralho() {

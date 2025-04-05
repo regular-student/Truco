@@ -12,6 +12,10 @@ public class Jogador {
         this.pontuacao = 0;
     }
 
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
     public void receberCarta(Carta carta) {
         mao.add(carta);
     }
@@ -35,4 +39,8 @@ public class Jogador {
         mao.remove(indice);
         return cartaEscolhida;
     }
+
+
+
+    
 }
