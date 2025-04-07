@@ -10,8 +10,6 @@ public class Baralho {
     public Baralho() {
         cartas = new ArrayList<>();
         iniciarBaralho();
-        
-        
     }
 
     public void iniciarBaralho() {
@@ -32,7 +30,7 @@ public class Baralho {
             }
         }
         Collections.shuffle(this.cartas);
-
+        gerarManilha();
     }
 
     public void mostrarBaralho() {
@@ -46,8 +44,9 @@ public class Baralho {
 
         for (Carta carta : this.cartas) {
             if (carta.getForca() != 10) {
-                if (carta.getForca() + 1 == carta.getForca()) {
+                if (c.getForca() + 1 == carta.getForca()) {
                     carta.setForca();
+                    System.out.println("Manilha: " + carta);
                 }
             } else {
                 if (1 == carta.getForca()) {

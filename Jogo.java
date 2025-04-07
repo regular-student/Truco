@@ -25,7 +25,7 @@ public class Jogo{
         }
         this.baralho = new Baralho();
         baralho.embaralhar();
-        baralho.gerarManilha();
+        //baralho.gerarManilha();
         baralho.mostrarBaralho();
         System.out.println("Baralho embaralhado.");
 

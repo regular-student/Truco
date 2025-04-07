@@ -33,7 +33,7 @@ public class Carta {
             case "Copas":
                 this.forca = 13;
                 break;
-            case "paus":
+            case "Paus":
                 this.forca = 14;
                 break;
             default:
